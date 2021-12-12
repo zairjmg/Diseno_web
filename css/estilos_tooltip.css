@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    font-family: sans-serif;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon {
+    width: 120px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.icon i {
+    color: black;
+    font-size: 80px;
+    display: block;
+    text-align: center;
+}
+
+.icon span {
+    position: absolute;
+    width: 120px;
+    background: black;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 0.6s opacity;
+}
+
+.icon span::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -6px;
+    background: black;
+    z-index: -1;
+    left: 50px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.icon:hover > span {
+    opacity: 1;
+}

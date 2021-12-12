@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet"> 
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/estilos_scroll_animado.css">
+        <link rel="shortcut icon" href="./img/logotipo_Mesa de trabajo 1.ico" type="image/x-icon">
+        <title>Animación al Scrollear</title>
+    </head>
+    
+    <body>
+        <div class="hero">
+            <h1>Mis Viajes</h1>
+        </div>
+
+        <div class="container">
+            <div class="evento ">
+                <div class="foto " data-aos="fade-right">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <h3 class="fecha" data-aos="fade-up-left">9 de Enero de 2021</h3>
+            </div>
+
+            <div class="evento"">
+                <div class="foto" data-aos="fade-left">
+                    <img src="./img/2.jpg" alt="">
+                </div>
+                <h3 class="fecha" data-aos="fade-up-right">3 de Febrero de 2021</h3>
+            </div>
+
+            <div class="evento">
+                <div class="foto" data-aos="fade-right">
+                    <img src="./img/3.jpg" alt="">
+                </div>
+                <h3 class="fecha" data-aos="fade-up-left">7 de Junio de 2022</h3>
+            </div>
+
+            <div class="evento">
+                <div class="foto" data-aos="fade-left">
+                    <img src="./img/4.jpg" alt="">   
+                </div>
+                <h3 class="fecha" data-aos="fade-up-right">18 de Agosto de 2023</h3>
+            </div>
+
+            <div class="evento">
+                <div class="foto" data-aos="fade-right">
+                    <img src="./img/5.jpg" alt="">
+                </div>
+                <h3 class="fecha" data-aos="fade-up-left">26 de Noviembre de 2024</h3>
+            </div>
+
+            <div class="evento">
+                <div class="foto" data-aos="fade-left">
+                    <img src="./img/6.jpg" alt="">
+                </div>
+                <h3 class="fecha" data-aos="fade-up-right">7 de Diciembre de 2021</h3>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000
+            });
+        </script>
+    </body>
+</html>

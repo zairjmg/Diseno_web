@@ -1,0 +1,218 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f2f2f2;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+}
+
+.contenedor {
+	width: 1200px;
+	margin: auto;
+	padding: 100px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 58px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+	color: #141414;
+	border: 5px solid #141414;
+	padding: 5px 10px;
+	display: inline-block;
+}
+
+.contenedor-botones {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 80px;
+    background: #141414;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    /*text-transform: uppercase;*/
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn span {
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+/*Boton uno*/
+
+.btn.uno::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #c4b107;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+
+.btn.uno:hover::after {
+    top: 0;
+}
+
+/*Boton dos*/
+
+.btn.dos::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 80px);
+    transition: .4s ease-in-out all;
+    border-bottom: 80px solid #286cff;
+    border-right: 80px solid transparent;
+}
+
+.btn.dos:hover::after {
+    left: 0;
+}
+
+/*Boton tres*/
+
+.btn.tres::after {
+    content: "";
+    width: 100%;
+    height: calc(100% * 4.5);
+    background: #05c46b;
+    position: absolute;
+    z-index: 1;
+    top: calc(-100%*4.5);
+    left: 0;
+    transition: .4s ease-in-out all;
+    border-radius:  0 0 50% 50%;
+}
+
+.btn.tres:hover::after {
+    top: 0;
+}
+
+/*Boton cuatro*/
+
+.btn.cuatro::after {
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease-in-out all;
+    border-radius: 100px;
+    transform-origin: center;
+}
+
+.btn.cuatro:hover::after {
+    transform: scale(400);
+    background: #ff3f34;
+}
+
+.btn.cuatro:hover {
+    background: #ff5e57;
+}
+
+/*Boton cinco*/
+
+.btn.cinco span {
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 40%;
+}
+
+.btn.cinco .icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    left: -40px;
+    transition: .4s ease-in-out all;
+    opacity: 0;
+}
+
+.btn.cinco svg {
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+
+.btn.cinco:hover {
+    background: #ffa801;
+}
+
+.btn.cinco:hover .icon {
+    left: calc(100% - 50px);
+    opacity: 1;
+}
+
+.btn.cinco:hover span {
+    color: #1e272e;
+    left: 20px;
+}
+
+.btn.cinco:hover svg {
+    color: #1e272e;
+}
+
+/*Boton seis*/
+
+.btn.seis {
+    background: none;
+    color: #1e272e;
+}
+
+.btn.seis svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+.btn.seis rect {
+    width: 100%;
+    height: 100%;
+    stroke: #141414;
+    stroke-width: 10px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: .8s ease all;
+}
+
+.btn.btn.seis:hover rect {
+    stroke-dashoffset: 0;
+}
