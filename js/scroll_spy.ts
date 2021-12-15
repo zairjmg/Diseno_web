@@ -1,6 +1,7 @@
 //@ts-check
 const encabezados = document.querySelectorAll('.contenedor .encabezado');
 const enlaces = document.querySelectorAll('#enlaces a');
+
 const observer = new IntersectionObserver((entradas, observador) => {
     console.log(entradas);
     entradas.forEach(entradas => {
